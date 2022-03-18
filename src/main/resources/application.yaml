@@ -1,0 +1,29 @@
+pubsub-example:
+  subscription:
+    name: email-subscription
+  topic:
+    name: email-topic
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  batch:
+    jdbc:
+      initialize-schema: never
+  profiles:
+    active: local
+  datasource:
+    url: # utilizar info do jira
+    jdbc-url: # utilizar info do jira
+    username: # utilizar info do jira
+    password: # utilizar info do jira
+    driver-class-name: # utilizar info do jira
+  cloud:
+    gcp:
+#      credentials:
+#        location: classpath:credentials.json
+      project-id: poc-email-banking
+      pubsub:
+        enabled: true
+        emulator-host: localhost:8681
+        project-id: poc-email-banking

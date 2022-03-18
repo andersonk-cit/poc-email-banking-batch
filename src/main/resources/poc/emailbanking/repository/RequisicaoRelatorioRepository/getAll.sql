@@ -1,0 +1,1 @@
+--- utilizar script do jira
